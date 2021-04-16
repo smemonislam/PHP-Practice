@@ -105,6 +105,36 @@ foreach( $multi_assoc_ad as $key => $value ){
   }
 }
 
+$ab = [  
+  'a' => '52',   
+  array(
+      'a' => 'A',
+      'b' => 'B',
+      'c' => 'C',
+      'd' => 'D',
+  ),
+  array(
+      'e' => 'E',
+      'f' => 'F',
+      'g' => 'G',
+      'h' => 'H',
+      'i' => 'I',
+  ),
+];
+
+// Multidimensional associative array Advanced topic
+foreach( $ab as $key => $value){
+  //echo $key;
+  if( is_array( $value ) ){
+      foreach( $value as $key2 => $value2 ){
+          echo $key2 . ' => ' . $value2 . '<br>';
+      }
+      
+  }
+  else {
+      echo $key . ' => ' . $value . '<br>';
+  }
+}
 
 
 
